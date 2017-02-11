@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     bourbon = require('node-bourbon'),
     ftp = require('vinyl-ftp'),
+	gcmq = require('gulp-group-css-media-queries'),
     notify = require("gulp-notify");
 
 // Скрипты проекта
@@ -43,6 +44,7 @@ gulp.task('sass', function () {
         }).on("error", notify.onError()))
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer(['last 15 versions']))
+		.pipe(gcmq())
         .pipe(cleanCSS())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('app/css'))
