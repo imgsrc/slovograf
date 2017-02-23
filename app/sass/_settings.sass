@@ -2,20 +2,24 @@
 @import vars
 
 *::-webkit-input-placeholder
-  color: #666
+  color: rgba($color, .6)
   opacity: 1
+  font-size: em(18px)
 
 *:-moz-placeholder
-  color: #666
+  color: rgba($color, .6)
   opacity: 1
+  font-size: em(18px)
 
 *::-moz-placeholder
-  color: #666
+  color: rgba($color, .6)
   opacity: 1
+  font-size: em(18px)
 
 *:-ms-input-placeholder
-  color: #666
+  color: rgba($color, .6)
   opacity: 1
+  font-size: em(18px)
 
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder
@@ -36,7 +40,7 @@ body
   min-width: 320px
   position: relative
   line-height: 1.4
-  color: #000
+  background: #fff url("../img/bg1.png") repeat left top
   font-family: $default-font
   overflow-x: hidden
 
@@ -50,12 +54,12 @@ h1, h2, h3, h4, h5, h6
   font-weight: normal
 
 h1
-  font-size: em(41px)
+  margin-top: 10px
+  font-size: em(32px)
   line-height: 1.2
 
-
 h2
-  font-size: em(32px)
+  font-size: em(28px)
 
 h3, h4
   font-family: "OpenSansSemiBold", sans-serif
@@ -79,24 +83,22 @@ b, strong
 .button
   display: inline-block
   border: none
-  background-color: $blue
+  background-color: $color
   text-align: center
-  color: #fff
+  color: $white
   font-size: em(14px)
   letter-spacing: 2px
   text-transform: uppercase
   padding: 13px 34px
-  border-radius: 3px
-  box-shadow: 0 4px 0 #0e9c4b
+  border-radius: 5px
   +mt(0.15s)
   &:hover, &:focus
-    color: #fff
+    color: $white
     text-decoration: none
   &:hover
-    background-color: #18cb65
+    background-color: lighten($color, 10%)
   &:active
-    background-color: #0e9c4b
-    transform: translateY(2px)
+    background-color: darken($color, 10%)
 
 .button-accent
   background-color: transparent

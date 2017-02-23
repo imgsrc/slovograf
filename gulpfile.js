@@ -20,8 +20,11 @@ var gulp = require('gulp'),
 gulp.task('scripts', function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
-        'app/libs/jquery-migrate/jquery-migrate.min.js',
+		'app/libs/jquery-migrate/jquery-migrate.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+        'app/libs/wow/dist/wow.min.js',
+        'app/libs/parallax.js/parallax.js',
+        'app/libs/equalheights/equalheights.js',
         'app/js/common.js' // Всегда в конце
     ])
         .pipe(concat('scripts.min.js'))
@@ -32,7 +35,9 @@ gulp.task('scripts', function () {
 
 gulp.task('browser-sync', function () {
     browserSync({
-        proxy: 'slovograf',
+        server: {
+            baseDir: 'app'
+        },
         notify: false
     });
 });
@@ -73,7 +78,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function () {
     ]).pipe(gulp.dest('dist'));
 
     var buildCss = gulp.src([
-        'app/css/main.min.css',
+        'app/css/main.min.css'
     ]).pipe(gulp.dest('dist/css'));
 
     var buildJs = gulp.src([
@@ -91,17 +96,17 @@ gulp.task('deploy', function () {
     var conn = ftp.create({
         host: '194.58.102.22',
         user: 'igor_verst',
-        password: 'userpassword',
+        password: '3ekSVQPA',
         parallel: 10,
         log: gutil.log
     });
 
     var globs = [
         'dist/**',
-        'dist/.htaccess',
+        'dist/.htaccess'
     ];
     return gulp.src(globs, {buffer: false})
-        .pipe(conn.dest('/slovograf'));
+        .pipe(conn.dest('./slovograph'));
 
 });
 
