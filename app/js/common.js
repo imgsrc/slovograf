@@ -1,7 +1,7 @@
 $(function() {
 
     //parallax
-    // $(".s-features").parallax({imageSrc: './img/bg2.jpg'});
+    $(".s-features").parallax({imageSrc: './img/bg_parallax5.jpg'});
 
     //EqualHeight
     $(".top-item-img").equalHeights();
@@ -82,5 +82,11 @@ $(function() {
             $img.replaceWith($svg);
         }, 'xml');
     });
+
+    //WOW
+    var wow = new WOW({
+        mobile: false
+    });
+    wow.init();
 	
 });
