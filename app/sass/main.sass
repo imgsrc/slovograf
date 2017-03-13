@@ -8,43 +8,14 @@ header
   color: $color
   position: relative
   min-height: 90vh
+  margin-bottom: 60px
 .top-line
   padding: 20px 0 0
   .top-logo
     img
       width: 100px
   .top-title
-    margin-left: 40px
-  .top-mnu
-    margin-top: 5px
-    display: block
-    float: none
-    position: relative
-    li
-      position: relative
-      display: inline-block
-      &:not(:last-child)
-        margin-right: 20px
-      a
-        color: $color
-        text-decoration: none
-        position: relative
-        &:after
-          content: ''
-          position: absolute
-          width: 100%
-          height: 3px
-          bottom: -3px
-          left: 0
-          background-color: lighten($color, 20%)
-          transform: scale(0)
-          +mt(.25s)
-        &:hover
-          text-decoration: none
-          &:after
-            transform-origin: 50% 0 0
-            transform: scale(1)
-
+    margin-left: 10px
   .top-contacts
     font-family: "Exo2Bold", sans-serif
     font-size: em(20px)
@@ -61,32 +32,83 @@ header
       font-family: "OpenSansRegular", sans-serif
       font-size: em(12px)
       line-height: 1
+.top-mnu
+  margin-top: 15px
+  display: block
+  float: none
+  position: relative
+  li
+    position: relative
+    display: inline-block
+    &:not(:last-child)
+      margin-right: 20px
+    a
+      color: $color
+      text-decoration: none
+      font-size: em(18px)
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 3px
+        bottom: -3px
+        left: 0
+        background-color: lighten($color, 20%)
+        transform: scale(0)
+        +mt(.25s)
+      &:hover
+        text-decoration: none
+        &:after
+          transform-origin: 50% 0 0
+          transform: scale(1)
+
 
 .top-head
-  margin-bottom: 30px
+  border: 2px solid $accent
+  text-shadow: 5px 10px 10px rgba($color, .5)
+  border-radius: 5px
+  margin:
+    bottom: 60px
+    top: 30px
   color: $blue
   span
     color: $accent
 .top-adv
-  h3
-    margin-top: 10px
+  .text-center
+    margin-top: 30px
     margin-bottom: 30px
+    h4
+      font-size: em(18px)
   .top-item
     text-align: center
+    margin-bottom: 40px
+    box-shadow: 0 5px 10px rgba($color, .5)
     .top-item-img
       img
         display: inline-block
         width: 100px
         height: auto
     p
-      font-size: em(13px)
+      font-size: em(14px)
       margin-top: 15px
+    span
+      font-size: em(13px)
+      color: rgba($color, .6)
+  .casket-bottom
+    h4
+      font-size: em(15px)
+    span
+      font-size: em(15px)
+      color: rgba($color, .6)
 
 .top-form
   padding: 0 0 20px
   border: 2px solid $color
   border-radius: 7px
+  box-shadow: 10px 10px 10px rgba($color, .5)
   .form-head
+    text-align: center
     padding: 20px 10px
     background-color: $color
     color: $white
@@ -111,22 +133,47 @@ header
         border-radius: 4px
     .text-center
       margin-top: 50px
-
 .top-text
-  p
-    line-height: 1.1
   h3
+    font-size: em(21px)
     margin-top: 0
     margin-bottom: 20px
+    strong
+      font-weight: normal
+      color: $accent
+  img
+    width: 380px
 
 
 .s-about
+  .top-text
+    p
+      &:first-child
+        text-indent: 30px
+        &:first-letter
+          font-size: em(35px)
+          line-height: 40px
+          padding-right: 8px
+          font-style: italic
+          position: relative
+          color: $white
+          font-family: $default-font
+  .inquiries
+    h4
+      margin: 30px 0
+    &-item
+      img
+        width: 100px
+
+
+.s-do-not
+  color: $white
+  img
+    width: 150px
+    margin-bottom: 40px
+
+.what-is-job
   padding-top: 50px
-  &-header
-    h3
-      font-size: em(24px)
-      margin-top: 0
-      margin-bottom: 30px
   &-item
     position: relative
     display: flex
@@ -152,17 +199,16 @@ header
       position: absolute
       content: '\f0ab'
       bottom: em(-20px)
-      left: 50%
+      left: 49%
       font-size: 40px
       color: rgba($white, .7)
       font-family: "FontAwesome", sans-serif
-
   h2
     margin-top: 60px
   h3
     margin-top: 10px
   .button
-    margin-top: 10px
+    margin-top: 30px
   .s-about-button
     .button
       margin-top: 60px
@@ -183,6 +229,8 @@ header
     margin-bottom: 40px
     h2
       margin-bottom: 20px
+      strong
+        color: lighten($accent, 20%)
   .not-list
     display: block
     padding: 0
@@ -191,7 +239,7 @@ header
       line-height: 2.1
       font-family: "OpenSansSemiBold", sans-serif
       .fa
-        color: $color
+        color: lighten($accent, 20%)
         margin-right: 7px
         font-size: 20px
 
@@ -275,10 +323,12 @@ header
     font-size: em(15px)
     margin-bottom: 15px
   .fa
+    color: lighten($accent, 20%)
     margin-right: 0
     width: 15px
     font-size: 20px
   a
+    color: $white
     text-decoration: none
     .img-svg
       margin-top: 20px

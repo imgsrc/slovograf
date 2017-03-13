@@ -2,10 +2,13 @@ $(function() {
 
     //parallax
     $(".s-features").parallax({imageSrc: './img/bg_parallax5.jpg'});
+    $(".s-do-not").parallax({imageSrc: './img/bg_parallax2.jpg'});
 
     //EqualHeight
     $(".top-item-img").equalHeights();
     $(".top-item p").equalHeights();
+    $(".inquiries-img").equalHeights();
+    $(".s-feat-item img").equalHeights();
 
 	//Magnific Popup
     $('.popup-gallery').magnificPopup({
