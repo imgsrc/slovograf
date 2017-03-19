@@ -23,10 +23,10 @@
 </head>
 
 <body>
-<header>
+<header id="js-header">
   <div class="container">
     <div class="row">
-      <div class="top-line clearfix">
+      <div class="top-line clearfix" id="js-top-line">
         
         <div class="col-md-1 hidden-xs">
           <div class="top-logo">
@@ -50,18 +50,20 @@
           </div><!-- ./top-contacts -->
         </div><!-- ./col-md-3 -->
       </div><!-- ./row -->
-      
-      <div class="row">
-        <div class="col-md-12 hidden-xs hidden-sm text-center">
-          <ul class="top-mnu">
-            <li><a href="#">О кампании</a></li>
-            <li><a href="#">Как мы работаем</a></li>
-            <li><a href="#">Наши преимущества</a></li>
-            <li><a href="#">Цены</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul><!-- ./top-mnu -->
-        </div><!-- ./col-md-5 hidden-xs hidden-sm -->
-      </div><!-- ./row -->
+
+        <div class="row">
+          <div class="col-md-12 hidden-xs hidden-sm text-center">
+            <ul class="top-mnu" id="js-nav">
+              <li><a href="#s-about">О кампании</a></li>
+              <li><a href="#s-do-not">Как мы не делаем</a></li>
+              <li><a href="#what-is-job">Как мы работаем</a></li>
+              <li><a href="#s-features">Наши преимущества</a></li>
+              <li><a href="#s-not">С кем мы не работаем</a></li>
+              <li><a href="#s-price">Цены</a></li>
+              <li><a href="#s-contacts">Контакты</a></li>
+            </ul><!-- ./top-mnu -->
+          </div><!-- ./col-md-5 hidden-xs hidden-sm -->
+        </div><!-- ./row -->
     
     </div><!-- ./top-line -->
     
@@ -192,7 +194,7 @@
   </div><!-- ./container-fluid -->
 
 </header>
-<section class="s-gray s-about">
+<section class="s-gray s-about" id="s-about">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
@@ -267,14 +269,14 @@
   </div><!-- ./container -->
 </section><!-- ./s-about -->
 
-<section class="s-do-not">
+<section class="s-do-not" id="s-do-not">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
         <h2>Как мы не делаем</h2>
       </div><!-- ./col-sm-12 text-center -->
     </div><!-- ./row -->
-  
+    
     <div class="row">
       
       <div class="col-sm-5 col-sm-offset-1 text-center">
@@ -290,96 +292,96 @@
       </div><!-- ./col-sm-6 text-center -->
       
       <div class="col-sm-1"></div>
-      
-    </div><!-- ./row -->
     
+    </div><!-- ./row -->
+  
   </div><!-- ./container -->
 </section><!-- ./s-do-not -->
 
-<section class="what-is-job  s-gray">
+<section class="what-is-job  s-gray" id="what-is-job">
   <div class="container">
-  
+    
     <div class="row">
       <div class="col-sm-12 text-center">
         <h2 class="wow zoomIn" data-wow-duration="2s">Как мы работаем?</h2>
       </div><!-- col-sm-12 text-center -->
     </div><!-- ./row -->
-  
+    
     <div class="row">
       <div class="what-is-job-item clearfix wow fadeInRight" data-wow-duration="1.5s">
-      
+        
         <div class="col-sm-2  col-sm-offset-1">
           <div class="img-side left">
             <img src="./img/svg/what-job/1.svg" alt="png">
           </div><!-- ./img-side -->
         </div><!-- ./col-sm-3 -->
-      
+        
         <div class="col-sm-9">
           <div class="text-side right">
             <p>Вы оставляете заявку на сайте/звоните</p>
           </div><!-- ./text-side right -->
         </div>
-    
+      
       </div><!-- ./what-is-job-item -->
     </div><!-- ./row -->
-  
+    
     <div class="row">
       <div class="what-is-job-item clearfix wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">
-      
+        
         <div class="col-sm-9  col-sm-offset-1">
           <div class="text-side left">
             <p>Мы с вами знакомимся, выявляем пути сотрудничества, происходит консультация</p>
           </div><!-- ./item-text -->
         </div>
-      
+        
         <div class="col-sm-2">
           <div class="img-side right">
             <img src="./img/svg/what-job/2.svg" alt="png">
           </div><!-- ./img-side right -->
         </div><!-- ./col-sm-2 -->
-    
+      
       </div><!-- ./what-is-job-item -->
     </div><!-- ./row -->
-  
+    
     <div class="row">
       <div class="what-is-job-item clearfix wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="1s">
-      
+        
         <div class="col-sm-2  col-sm-offset-1">
           <div class="img-side left">
             <img src="./img/svg/what-job/3.svg" alt="png">
           </div><!-- ./img-side -->
         </div><!-- ./col-sm-3 -->
-      
+        
         <div class="col-sm-9">
           <div class="text-side right">
             <p>Выявляем оптимальные KPI в вашем случае</p>
           </div><!-- ./text-side right -->
         </div>
-    
+      
       </div><!-- ./what-is-job-item -->
     </div><!-- ./row -->
-  
+    
     <div class="row">
-    <div class="what-is-job-item clearfix wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.5s">
+      <div class="what-is-job-item clearfix wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.5s">
+        
+        <div class="col-sm-9  col-sm-offset-1">
+          <div class="text-side left">
+            <p>Согласовываем тестовый бюджет и стратегию продвижения, происходит оплата</p>
+          </div><!-- ./item-text -->
+        </div>
+        
+        <div class="col-sm-2">
+          <div class="img-side right">
+            <img src="./img/svg/what-job/4.svg" alt="png">
+          </div><!-- ./img-side right -->
+        </div><!-- ./col-sm-2 -->
+      
+      </div><!-- ./what-is-job-item -->
+    </div><!-- ./row -->
     
-      <div class="col-sm-9  col-sm-offset-1">
-        <div class="text-side left">
-          <p>Согласовываем тестовый бюджет и стратегию продвижения, происходит оплата</p>
-        </div><!-- ./item-text -->
-      </div>
-    
-      <div class="col-sm-2">
-        <div class="img-side right">
-          <img src="./img/svg/what-job/4.svg" alt="png">
-        </div><!-- ./img-side right -->
-      </div><!-- ./col-sm-2 -->
-  
-    </div><!-- ./what-is-job-item -->
-  </div><!-- ./row -->
-  
     <div class="row">
       <div class="what-is-job-item clearfix wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="1.5s">
-  
+        
         <div class="col-sm-2 col-sm-offset-1">
           <div class="img-side left">
             <img src="./img/svg/what-job/7.svg" alt="png">
@@ -391,13 +393,13 @@
             <p>Происходит оплата настройки</p>
           </div><!-- ./item-text -->
         </div>
-    
+      
       </div><!-- ./what-is-job-item -->
     </div><!-- ./row -->
-  
+    
     <div class="row">
       <div class="what-is-job-item clearfix wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="2s">
-  
+        
         <div class="col-sm-9 col-sm-offset-1">
           <div class="text-side left">
             <p>Настройка тестовой рекламной кампании</p>
@@ -409,13 +411,13 @@
             <img src="./img/svg/what-job/5.svg" alt="png">
           </div><!-- ./img-side -->
         </div><!-- ./col-sm-3 -->
-    
+      
       </div><!-- ./what-is-job-item -->
     </div><!-- ./row -->
-  
+    
     <div class="row">
       <div class="what-is-job-item clearfix wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="2s">
-  
+        
         <div class="col-sm-2  col-sm-offset-1">
           <div class="img-side left">
             <img src="./img/svg/what-job/6.svg" alt="svg">
@@ -427,16 +429,16 @@
             <p>По результатам аналитики тестовой кампании продолжаем сотрудничество</p>
           </div><!-- ./item-text -->
         </div>
-    
+      
       </div><!-- ./what-is-job-item -->
     </div><!-- ./row -->
-  
-    <div class="what-is-job-button text-center"><a href="#callback" class="button">Оставить заявку</a></div>
     
+    <div class="what-is-job-button text-center"><a href="#callback" class="button">Оставить заявку</a></div>
+  
   </div><!-- ./container -->
 </section><!-- ./what-is-job -->
 
-<section class="s-features">
+<section class="s-features" id="s-features">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
@@ -472,7 +474,7 @@
           </div><!-- ./item-text -->
         </div><!-- ./s-feat-item text-center -->
       </div><!-- ./col-sm-3 -->
-  
+      
       <div class="col-sm-3">
         <div class="s-feat-item text-center">
           <img src="./img/svg/adv/4.svg" alt="svg">
@@ -486,7 +488,7 @@
   </div><!-- ./container -->
 </section><!-- ./s-features -->
 
-<section class="s-not s-gray">
+<section class="s-not s-gray" id="s-not">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
@@ -503,7 +505,7 @@
           <li><i class="fa fa-times"></i> Нет выделенного контактного лица для взаимодействия со стороны клиента</li>
           <li><i class="fa fa-times"></i> МЛМ, Китай, пирамиды, оружие, игрушки для взрослых — по моральным принципам
           <li><i class="fa fa-times"></i> Устаревший неудобный сайт, которому не помогут даже "косметические" правки
-        </li>
+          </li>
         </ul><!-- ./not-list -->
       </div><!-- ./col-sm-12 -->
     </div><!-- ./row -->
@@ -511,7 +513,7 @@
   </div><!-- ./container -->
 </section><!-- ./s-not -->
 <hr>
-<section class="s-price">
+<section class="s-price" id="s-price">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
@@ -591,7 +593,7 @@
   </div><!-- ./container -->
 </section><!-- ./s-price -->
 
-<section class="s-gray s-contacts">
+<section class="s-gray s-contacts" id="s-contacts">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">

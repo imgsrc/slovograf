@@ -4,6 +4,27 @@ $(function() {
     $(".s-features").parallax({imageSrc: './img/bg_parallax5.jpg'});
     $(".s-do-not").parallax({imageSrc: './img/bg_parallax2.jpg'});
 
+    //Fixed nav
+    var HeaderH = $("#js-header").height() - 80;
+    $(document).on("scroll", function () {
+         var documentScroll = $(this).scrollTop();
+         if (documentScroll > HeaderH) {
+             $("#js-nav").addClass("fixed");
+         }else {
+             $("#js-nav").removeClass("fixed");
+         }
+    });
+
+    //Smooth scroll
+    $(".top-mnu a").on("click", function (e) {
+        e.preventDefault();
+        var currentBlock = $(this).attr("href"),
+            currentBlockOffset = $(currentBlock).offset().top;
+        $("html, body").animate({
+            scrollTop: currentBlockOffset -20
+        }, 500);
+    });
+
     //EqualHeight
     $(".top-item-img").equalHeights();
     $(".top-item p").equalHeights();
